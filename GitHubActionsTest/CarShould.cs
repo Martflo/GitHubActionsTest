@@ -10,11 +10,4 @@ public class CarShould
         Car car = new Car();
         car.Color.Should().Be("Black");
     }
-
-    [Fact]
-    public void BeFail()
-    {
-        Car car = new Car();
-        car.Color.Should().Be("azUGHJKAjhkjSN");
-    }
 }
