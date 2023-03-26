@@ -15,6 +15,6 @@ public class CarShould
     public void BeFail()
     {
         Car car = new Car();
-        car.Color.Should().Be("azUGHJKASN");
+        car.Color.Should().Be("azUGHJKAjhkjSN");
     }
 }
