@@ -29,12 +29,11 @@ jobs:
 
 #      - name: Publish
 #        run: dotnet publish --no-build --configuration Release --output publish
-
-  - name: executing remote ssh commands using password
-    uses: appleboy/ssh-action@v0.1.8
-    with:
-      host: ${{ secrets.HOST }}
-      username: ${{ secrets.USERNAME }}
-      password: ${{ secrets.PASSWORD }}
-      port: ${{ secrets.PORT }}
-      script: whoami
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@v0.1.8
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          script: whoami
