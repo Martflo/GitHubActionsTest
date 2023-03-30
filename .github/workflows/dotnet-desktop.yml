@@ -26,3 +26,15 @@ jobs:
 
       - name: Run Tests
         run: dotnet test --no-build --configuration Debug --logger "console;verbosity=detailed"
+
+      - name: Publish
+        run: dotnet publish --no-build --configuration Release --output publish
+
+      - name: Deploy
+        uses: appleboy/ssh-action@master
+        with:
+          host: 213.254.92.240
+          username: sharki
+          key: ${{ secrets.SSH_KEY_RASPBERRY_PI }}
+          script: |
+            whoami
