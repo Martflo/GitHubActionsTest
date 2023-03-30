@@ -29,11 +29,13 @@ jobs:
 
 #      - name: Publish
 #        run: dotnet publish --no-build --configuration Release --output publish
-      - name: executing remote ssh commands using password
-        uses: appleboy/ssh-action@v0.1.8
+
+      - name: ls -a via ssh
+        uses: fifsky/ssh-action@master
         with:
+          command: |
+            whoami
           host: ${{ secrets.HOST }}
-          username: ${{ secrets.USER }}
-          password: ${{ secrets.PASSWORD }}
+          user: ${{ secrets.USER }}
+          pass: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          script: whoami
