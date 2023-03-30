@@ -39,3 +39,4 @@ jobs:
           user: ${{ secrets.USER }}
           pass: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
+          args: "-tt -vvv"
