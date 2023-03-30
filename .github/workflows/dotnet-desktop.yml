@@ -33,6 +33,7 @@ jobs:
       - name: Deploy
         uses: appleboy/ssh-action@master
         with:
+          port: 22
           host: 213.254.92.240
           username:  ${{ secrets.USER }}
           password:  ${{ secrets.PASSWORD }}
