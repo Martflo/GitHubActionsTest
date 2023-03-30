@@ -37,6 +37,7 @@ jobs:
             whoami
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
-          pass: ${{ secrets.PASSWORD }}
+  #        pass: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
+          key: ${{ secrets.KEY }}
           args: "-tt -vvv"
