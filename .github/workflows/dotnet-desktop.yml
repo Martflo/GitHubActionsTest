@@ -27,8 +27,8 @@ jobs:
       - name: Run Tests
         run: dotnet test --no-build --configuration Debug --logger "console;verbosity=detailed"
 
-      - name: Publish
-        run: dotnet publish --no-build --configuration Release --output publish
+#      - name: Publish
+#        run: dotnet publish --no-build --configuration Release --output publish
 
       - name: Deploy
         uses: appleboy/ssh-action@master
