@@ -8,7 +8,7 @@ on:
 
 jobs:
   build-and-test:
-    runs-on: ubuntu-20.04
+    runs-on: self-hosted
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -30,14 +30,5 @@ jobs:
 #      - name: Publish
 #        run: dotnet publish --no-build --configuration Release --output publish
 
-      - name: ls -a via ssh
-        uses: fifsky/ssh-action@master
-        with:
-          command: |
-            whoami
-          host: ${{ secrets.HOST }}
-          user: ${{ secrets.USER }}
-  #        pass: ${{ secrets.PASSWORD }}
-          port: ${{ secrets.PORT }}
-          key: ${{ secrets.KEY }}
-          args: "-tt -vvv"
+      - run: |
+          whoami
